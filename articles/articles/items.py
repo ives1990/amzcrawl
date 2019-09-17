@@ -13,6 +13,7 @@ class ArticlesItem(Item):
     # name = scrapy.Field()
     name = Field()
     cover = Field()
+    cover_url = Field()
     label = Field()
     author = Field()
     description = Field()

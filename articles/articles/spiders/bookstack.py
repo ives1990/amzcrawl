@@ -16,7 +16,7 @@ class BookstackSpider(scrapy.Spider):
             item = ArticlesItem()
             item['name'] = dl.css('.name::text').extract_first().strip()
             item['label'] = book.css('::attr(href)').extract_first().split('/')[-1]
-            item['cover'] = book.css('img::attr(src)').extract_first().strip()
+            item['cover_url'] = book.css('img::attr(src)').extract_first().strip()
             item['author'] = 'bookstack'
             item['description'] = ''
             item['tags'] = []
